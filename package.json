@@ -1,0 +1,22 @@
+{
+  "name": "astronomyappservice2",
+  "version": "1.0.0",
+  "description": "Back-end service to make calls to NASA APIs",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uchan3/AstronomyAppService2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uchan3/AstronomyAppService2/issues"
+  },
+  "homepage": "https://github.com/uchan3/AstronomyAppService2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
