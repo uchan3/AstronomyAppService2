@@ -4,7 +4,7 @@
   "description": "Back-end service to make calls to NASA APIs",
   "main": "service.js",
   "scripts": {
-    "build": "echo 'temporary build script command executed'"
+    "build": "echo 'temporary build script command executed'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
