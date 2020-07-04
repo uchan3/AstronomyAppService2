@@ -1,15 +1,31 @@
 var currentDate = new Date();
-var yesterday = new Date(currentDate); 
-/*We use setDate() to define a new date. 
-getDate() retrieves date of month.
-So, we subtract 1 to get yesterday's date.*/
-yesterday.setDate(yesterday.getDate()-1); 
 
 var todayString = DateString(currentDate); 
-var yesterdayString = DateString(yesterday); 
 
-console.log(todayString); 
-console.log(yesterdayString); 
+var dateValues = DateArray(currentDate); 
+dateValues.unshift(todayString); 
+
+//Testing that dates are showing. 
+//console.log(todayString); 
+dateValues.forEach(value => console.log(value)); 
+
+function DateArray(dateValue)
+{
+  //Return previous 4 days. 
+  var DateArray = new Array(); 
+  var i;
+  for(i = 1; i<=4; i++)
+  {
+    var tempDate = new Date(dateValue); 
+    /*We use setDate() to define a new date. 
+    getDate() retrieves date of month.
+    So, we subtract 1 to get yesterday's date.*/
+    tempDate.setDate(tempDate.getDate()-i); 
+    var tempString = DateString(tempDate); 
+    DateArray.push(tempString); 
+  }
+  return DateArray; 
+}
 
 function DateString(dateValue)
 {
