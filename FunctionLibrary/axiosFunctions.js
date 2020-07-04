@@ -12,3 +12,11 @@ async function getPicInfo()
 
 getPicInfo().then(res => console.log(res));
 
+//Make requests for pictures from past 5 days. 
+async function getFivePic()
+{
+  //APOD API Date Format = YYYY-MM-DD
+  var CurrentDay = new Date().getDate();
+  //axios.default.all()
+
+}
