@@ -1,13 +1,12 @@
-var currentDate = new Date();
-
-var todayString = DateString(currentDate); 
-
-var dateValues = DateArray(currentDate); 
-dateValues.unshift(todayString); 
+//Code to test the functions.
+// let currentDate = new Date();
+// let todayString = DateString(currentDate); 
+// let dateValues = DateArray(currentDate); 
+// dateValues.unshift(todayString); 
 
 //Testing that dates are showing. 
 //console.log(todayString); 
-dateValues.forEach(value => console.log(value)); 
+//dateValues.forEach(value => console.log(value)); 
 
 function DateArray(dateValue)
 {
@@ -29,6 +28,7 @@ function DateArray(dateValue)
 
 function DateString(dateValue)
 {
+  //Parse dates into format YYYY-MM-DD
   //UTC: a time standard used by the world
   var year = dateValue.getUTCFullYear(); 
   var month = dateValue.getUTCMonth() + 1;  //Increment by one. Month returns value btwn 0 and 11. 
@@ -37,6 +37,10 @@ function DateString(dateValue)
   return DateString; 
 }
 
+module.exports = {
+  DateString: DateString, 
+  DateArray: DateArray
+}
 //Listing methods of date here for reference. 
 // currentDate.getDate(); //Day of month
 // currentDate.getFullYear(); //Year 
